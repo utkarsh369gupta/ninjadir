@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body ng-app>
+    <div ng-init="color = ['red', 'blue', 'green']">
+        <div class="box" ng-repeat="x in color" ng-style="{'background-color': x, 'border': '2px solid black', 'padding': '10px', 'margin': '10px', 'display': 'flex'}">
+            {{x}}
+        </div>
+    </div>
+</body>
+</html>

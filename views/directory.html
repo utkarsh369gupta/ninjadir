@@ -1,0 +1,30 @@
+<div class="application">
+    <input type="search" name="search" id="search" placeholder="&#128269; search Ninja" ng-model="search">
+    <div class="sortbtn">
+        <input class="btn" type="button" value="Order by Name" ng-click="order='name'">
+        <input class="btn" type="button" value="Order by Rate" ng-click="order='rate'">
+        <input class="btn" type="button" value="Order by Belt" ng-click="order='belt'">
+    </div>
+
+    <div>
+        <ul class="ninjasList">
+            <li ng-repeat="x in ninjas | filter:search | orderBy:order" ng-show="x.available">
+                <img class="ninjaImage" ng-src="{{x.src}}" ng-show="x.src">
+                <span class="name-rate">{{x.name}} - {{x.rate | currency:'&#8377;'}}</span>
+                <span id="close" ng-click="removeNinja(x)">X</span>
+                <span id="beltcolor" ng-style="{'background-color': x.belt}">{{x.belt}}</span>
+                <hr>
+            </li>
+        </ul>
+        <div class="insertNinja">
+            <form ng-submit="addNinja()">
+                <input type="text" name="ninjaname" id="ninjaname" placeholder="Enter name" ng-model="newNinja.name">
+                <input type="text" name="ninjarate" id="ninjarate" placeholder="Enter rate" ng-model="newNinja.rate">
+                <input type="text" name="ninjabelt" id="ninjabelt" placeholder="Enter belt" ng-model="newNinja.belt">
+                <!-- <input type="file" accept="image/*" onchange="loadFile(event)"
+                ng-model="newNinja.image"> -->
+                <input class="btn" type="submit" value="Add Ninja">
+            </form>
+        </div>
+    </div>
+</div>

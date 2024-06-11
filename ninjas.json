@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Shaun",
+        "rate": "20000",
+        "belt": "red",
+        "available": true,
+        "src": "images/shaun.jpg"
+    },
+    {
+        "name": "John",
+        "rate": "10000",
+        "belt": "white",
+        "available": false,
+        "src": "images/john.jpg"
+    },
+    {
+        "name": "Ryu",
+        "rate": "40000",
+        "belt": "blue",
+        "available": true ,
+        "src": "images/ryu.jpg"
+    },
+    {
+        "name": "Kai",
+        "rate": "70000",
+        "belt": "black",
+        "available": true,
+        "src": "images/kai.jpg"
+    },
+    {
+        "name": "Koga",
+        "rate": "45000",
+        "belt": "orange",
+        "available": true,
+        "src": "images/koga.jpg"
+    }
+]
